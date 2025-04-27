@@ -37,67 +37,81 @@
         </div>
     </section>
     
-    <main class="contenedor">
-        <h2>Mis proyectos</h2>
+    <main class="contenedor sombra">
+        <h2 style="font-weight: bold;">MIS PROYECTOS</h2>
     
-        <section>
-            <h3>Diseño Web</h3>
-            <img src="img/web-svgrepo-com.svg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
-        </section>
+        <div class="servicios">
+            <section class="diseño-web">
+                <h3>Diseño Web</h3>
+                <a href="diseñoweb.html" >
+                    <img src="img/web-svgrepo-com.svg" alt="">
+                </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
+            </section>
+
+            <section class="aplicaciones-moviles">
+                <h3>Aplicaciones Móviles</h3>
+                <a href="aplicacionesmoviles.html">
+                    <img src="img/android-svgrepo-com.svg" alt="">
+                </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
+            </section>
+        
+            <section class="videojuegos">
+                <h3>Videojuegos</h3>
+                <a href="videojuegos.html">
+                    <img src="img/joystick-svgrepo-com.svg" alt="">
+                </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
+            </section>
+        </div>
 
         <section>
-            <h3>Aplicaciones Móviles</h3>
-            <img src="img/android-svgrepo-com.svg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
-        </section>
+            <h2>Contacto</h2>
+
+            <form class="formulario" action="">
+                <fieldset>
+                    <legend>Contáctame rellenando todos los campos</legend>
+
+                    <div class="contenedor-campos">
+                        <div class="nombre-apellido">
+                            <div class="campo">
+                                <label for="">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Nombre">
+                            </div>
+        
+                            <div class="campo">
+                                <label for="">Apellidos</label>
+                                <input type="text" name="apell" id="apell" placeholder="Apellidos">
+                            </div>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="">Correo</label>
+                            <input type="email" name="mail" id="mail" placeholder="Email">
+                        </div>
     
-        <section>
-            <h3>Videojuegos</h3>
-            <img src="img/joystick-svgrepo-com.svg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iure illo quas rem dolores voluptatum!</p>
-        </section>
-    </main>  
-
-    <hr>
+                        <div class="campo">
+                            <label for="">Teléfono</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Teléfono">
+                        </div>
     
-    <section>
-        <h2>Contacto</h2>
-
-        <form action="">
-            <fieldset>
-                <legend>Contáctame rellenando todos los campos</legend>
-
-                <div>
-                    <label for="">Nombre</label>
-                    <input type="text" name="name" id="name" placeholder="Nombre">
-                </div>
-
-                <div></div>
-                <label for="">Apellidos</label>
-                <input type="text" name="apell" id="apell" placeholder="Apellidos">
-
-                <div>
-                    <label for="">Correo</label>
-                    <input type="email" name="mail" id="mail" placeholder="Email">
-                </div>
-
-                <div>
-                    <label for="">Teléfono</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Teléfono">
-                </div>
-
-                <div>
-                    <label for="">Mensaje</label>
-                    <textarea name="mensage" id="mensage" placeholder="Cuéntame lo que quieras"></textarea>
-                </div>
-
-                <div>
-                    <input type="submit" name="send" id="send" value="Enviar">
-                </div>
-            </fieldset>
-        </form>
-    </section>
+                        <div class="campo">
+                            <label for="">Mensaje</label>
+                            <textarea name="mensage" id="mensage" placeholder="Cuéntame lo que quieras"></textarea>
+                        </div>
+                        
+                        <div class="campo">
+                            <input class="boton" type="submit" name="send" id="send" value="Enviar">
+                        </div>
+                        
+                    </div><!-- .contenedor-campos -->
+                    
+                    
+                </fieldset>
+            </form>
+        </section>
+    </main>
     
     <hr>
 

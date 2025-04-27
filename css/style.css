@@ -19,7 +19,18 @@ html{
 body{
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Roboto';
-    background-image: linear-gradient(to top,  rgb(194, 194, 194) 0%, var(--blanco) 100%);
+    background-image: linear-gradient(to top,  #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.601);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.601);
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .titulo{
@@ -34,6 +45,29 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 /* Navegación */
@@ -81,10 +115,12 @@ body{
     background-size: cover;
     height: 30rem;
     position: relative;
+    margin-bottom: 3rem;;
 }
 @media (max-width: 768px){
     .hero{
         height: 15rem;
+        margin-bottom: 1rem;
     }
 
 }
@@ -117,5 +153,133 @@ body{
     img{
         width: 2.8rem;
         height: 2.8rem;
+    }
+}
+
+/*Servicios*/
+.servicios section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.servicios  h3{
+    color: var(--secundario);
+}
+
+.servicios img{
+    width: 8rem;
+    height: 8rem;
+}
+
+.diseño-web a:hover img{
+    content: url(../img/web-svgrepo-com_hover.svg);
+}
+
+.aplicaciones-moviles a:hover img{
+    content: url(../img/android-svgrepo-com_hover.svg);
+}
+
+.videojuegos a:hover img{
+    content: url(../img/joystick-svgrepo-com_hover.svg);
+}
+
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*Contacto*/
+
+.formulario{
+    background-color: var(--gris);
+    width: 60rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+@media (max-width: 768px){
+    .formulario{
+        width: 25rem;
+        padding: 1rem;
+    }
+}
+
+.formulario fieldset{
+    border:none;
+}
+
+.formulario legend{
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--primario);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.campo .boton {
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .campo input.boton {
+        margin: 2rem auto 0 auto;
+        width: 50%;
+        display: block;
+    }
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea{
+    border-radius: 0.5rem;
+    border: none;
+    height: 20rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.campo input[type='text'],
+.campo input[type='email'],
+.campo input[type='tel']{
+    border-radius: 0.5rem;
+    border: none;
+    height: 3rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+@media (min-width: 768px){
+    .nombre-apellido {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem; /* espacio entre columnas */
     }
 }
