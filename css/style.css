@@ -1,0 +1,121 @@
+/* Paleta de colores */
+:root{
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack BoxModel */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Roboto';
+    background-image: linear-gradient(to top,  rgb(194, 194, 194) 0%, var(--blanco) 100%);
+}
+
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    /* Centrar contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navegación */
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.nav-princ{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .nav-princ{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.nav-princ a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+@media (max-width: 768px){
+    .nav-princ a{
+        text-align: center;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+.nav-princ a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/* Hero */
+.hero {
+    background-image: url(../img/bq-hero.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+}
+@media (max-width: 768px){
+    .hero{
+        height: 15rem;
+    }
+
+}
+
+.hero-content {
+    position: absolute;
+    background-color: rgb(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    
+    /* Alinear centro vertical y horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cambiar imagen de botón al hacer hover */
+.hero-content a:hover img{
+    content: url(../img/map-svgrepo-com_hover.svg);
+}
+
+.hero-content h2{
+    color: var(--primario);
+}
+@media (max-width: 768px){
+    .hero-content h2, p{
+        font-size: 1.5rem;
+    }
+    img{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
