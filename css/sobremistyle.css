@@ -109,3 +109,332 @@ body{
     background-color: var(--primario);
     color: var(--oscuro);
 }
+
+
+/* Hero */
+.hero {
+    background-image: url(../img/bq-hero.jpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+    margin-bottom: 3rem;;
+}
+@media (max-width: 768px){
+    .hero{
+        height: 15rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.hero-content {
+    position: absolute;
+    background-color: rgb(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    
+    /* Alinear centro vertical y horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2{
+    color: var(--primario);
+}.hero-content p{
+    color: var(--blanco);
+    text-align: center;
+}
+@media (max-width: 768px){
+    .hero-content h2{
+        font-size: 1.5rem;
+    }
+    .hero-content p{
+        font-size: 1rem;
+    }
+    img{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+/*Botones linkedin y github*/
+.botonesWebs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Botones estilizados */
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primario);
+    color: var(--oscuro);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.icon-button:hover {
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+/* Icono oculto por defecto */
+.icon-button .icon {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background: url('https://via.placeholder.com/16') no-repeat center;
+    background-size: contain;
+    margin-right: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease, margin-right 0.3s ease;
+}
+
+/* Texto del botón */
+.icon-button .text {
+    transition: margin-left 0.3s ease;
+}
+
+/* Al pasar el cursor, aparece el icono */
+.icon-button:hover .icon {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    margin-right: 8px;
+}
+
+.icon-button:hover .text {
+    margin-left: 4px;
+}
+
+/* Estilos específicos para cada botón */
+.icon-button.github .icon {
+    background: url('../img/githubIcon.png') no-repeat center; /* Icono de ejemplo para Github */
+    background-size: contain;
+}
+
+.icon-button.linkedin .icon {
+    background: url('../img/iconLinkedin.png') no-repeat center; /* Icono de ejemplo para Linkedin */
+    background-size: contain;
+}
+
+
+/* Estilo común para los div dentro de botonesWebs */
+.botonesWebs > div {
+    text-align: center;
+    /*Aseguraqueeltextodentrodecadadivestécentrado*/background-color: rgb(0, 19, 129);
+    /*Fondoparalosbotones*/color: #ffffff;
+    /*Textonegro*/padding: 10px 20px;
+    /*Espaciadointerno*/border-radius: 5px;
+    /*Esquinasredondeadas*/font-size: 16px;
+    /*Tamañodeltexto*/font-weight: bold;
+    /*Resaltaeltexto*/cursor: pointer;
+    /*Cambiaelcursoralpasarporencima*/transition: background-color 1.3s;
+    /*Efectosuavealpasarelcursor*/margin-top: 20px;
+}
+
+/* Efecto hover en los div de botonesWebs */
+.botonesWebs > div:hover {
+    background-color: rgb(1, 39, 255); /* Cambia el color del fondo al pasar el cursor */
+    color: #ffd93f; /* Cambia el color del texto */
+}
+
+@media (max-width: 768px){
+    .icon-button.github, .icon-button.linkedin{
+        height: 2.5rem;
+        width: 9rem;
+    }
+}
+
+/*Lenguajes*/
+
+.lenguajes h2 {
+    color: var(--primario);
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .lenguajes img{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* Estilo del botón iconJava */
+.iconJava {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconJava */
+.iconJava:hover {
+    content: url(../img/IconsDev/java-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconC# */
+.iconC {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconC# */
+.iconC:hover {
+    content: url(../img/IconsDev/csharp-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconPython */
+.iconPython {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconPython */
+.iconPython:hover {
+    content: url(../img/IconsDev/python-127-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconMysql */
+.iconMysql {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconMysql */
+.iconMysql:hover {
+    content: url(../img/IconsDev/mysql-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconAndroid */
+.iconAndroid {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconAndroid */
+.iconAndroid:hover {
+    content: url(../img/android-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconUnity */
+.iconUnity {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconAndroid */
+.iconUnity:hover {
+    content: url(../img/IconsDev/unity-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconDocker */
+.iconDocker {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconDocker */
+.iconDocker:hover {
+    content: url(../img/IconsDev/docker-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconGit */
+.iconGit {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconGit */
+.iconGit:hover {
+    content: url(../img/IconsDev/git-svgrepo-com_hover.svg);
+}
+
+/* Estilo del botón iconVisual */
+.iconVisual {
+    width: 5rem; /* Ancho del botón */
+    height: 5rem; /* Alto del botón */
+}
+
+/* Efecto hover para iconVisual */
+.iconVisual:hover {
+    content: url(../img/IconsDev/git-svgrepo-com_hover.svg);
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 4rem 2rem 2rem 2rem;
+    width: 100%;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-items: center;
+}
+
+.footer-columna {
+    width: 100%;
+}
+
+.footer-columna h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primario);
+    text-align: center;
+}
+
+.footer-nav a,
+.redes-sociales a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.footer-nav a:hover,
+.redes-sociales a:hover {
+    color: var(--primario);
+}
+
+.footer-columna p {
+    margin: .8rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    }
+    .footer-columna h3{
+        font-size: 1.5rem;
+    }
+    .footer-columna p,
+    .footer-columna a{
+        font-size: 1rem;
+    }
+}  
