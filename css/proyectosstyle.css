@@ -110,6 +110,7 @@ body{
     color: var(--oscuro);
 }
 
+
 .proyectos-nav {
     position: relative;
     display: inline-block;
@@ -147,7 +148,6 @@ body{
 .proyectos-nav:hover .dropdown-content {
     display: block;
 }
-
 
 
 /*Footer*/
